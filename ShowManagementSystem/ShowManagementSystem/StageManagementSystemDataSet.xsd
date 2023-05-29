@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StageManagementSystemDataSet" targetNamespace="http://tempuri.org/StageManagementSystemDataSet.xsd" xmlns:mstns="http://tempuri.org/StageManagementSystemDataSet.xsd" xmlns="http://tempuri.org/StageManagementSystemDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StageManagementSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StageManagementSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ShowManagementSystem.Properties.Settings.GlobalReference.Default.StageManagementSystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="placeTableAdapter" GeneratorDataComponentClassName="placeTableAdapter" Name="place" UserDataComponentName="placeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StageManagementSystemConnectionString (Settings)" DbObjectName="dbo.place" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT venue FROM dbo.place</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="venue" DataSetColumn="venue" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StageManagementSystemDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="StageManagementSystemDataSet" msprop:Generator_DataSetName="StageManagementSystemDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="place" msprop:Generator_RowEvHandlerName="placeRowChangeEventHandler" msprop:Generator_RowDeletedName="placeRowDeleted" msprop:Generator_RowDeletingName="placeRowDeleting" msprop:Generator_RowEvArgName="placeRowChangeEvent" msprop:Generator_TablePropName="place" msprop:Generator_RowChangedName="placeRowChanged" msprop:Generator_RowChangingName="placeRowChanging" msprop:Generator_TableClassName="placeDataTable" msprop:Generator_RowClassName="placeRow" msprop:Generator_TableVarName="tableplace" msprop:Generator_UserTableName="place">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="venue" msprop:Generator_ColumnPropNameInRow="venue" msprop:Generator_ColumnPropNameInTable="venueColumn" msprop:Generator_ColumnVarNameInTable="columnvenue" msprop:Generator_UserColumnName="venue">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
